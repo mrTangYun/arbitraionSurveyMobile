@@ -212,11 +212,12 @@ img {
               display: flex;
               flex-direction: row;
               & > div {
-                margin-right: 115px;
+                padding-right: 115px;
               }
             }
             & > div{
-              margin-bottom: 37px;
+              padding-top: 18px;
+              padding-bottom: 18px;
               &.choosed > span:after{
                 opacity: 1;
               }
@@ -253,6 +254,13 @@ img {
           &.select{
             & > div {
               margin-bottom: 25px;
+              select{
+                min-width: 100px;
+                height: 41px;
+                font-size: 24px;
+                border: 1px solid #000000;
+                background: #fff;
+              }
             }
           }
           &.textArea{
