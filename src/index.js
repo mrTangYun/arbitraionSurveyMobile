@@ -74,7 +74,6 @@ const bindHandler = () => {
         $('#changeLang').removeClass('langChn').addClass('langEn');
         $('input, textarea').attr('placeholder', '');
         calProgress();
-
     });
 };
 

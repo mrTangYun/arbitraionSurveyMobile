@@ -118,6 +118,17 @@ img {
         align-items: center;
         justify-content: center;
         position: relative;
+        &:after{
+          content: ' ';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-image: url("./images/hightlight.png");
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+        }
         & > img{
           width: 100%;
           position: absolute;
