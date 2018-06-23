@@ -59,16 +59,33 @@
                 <img src='images/logo.png' alt=""/>
             </div>
             <div class="outer">
-                <div class="qustionOuter">
+                <div class="qustionOuter langChn">
+                    <div class="questionItem">
+                        <div class="count">
+                            <span class="chn">题目1</span>
+                            <span class="en">Qustion 1</span>
+                        </div>
+                        <div class="mainTitle">
+                            <span class="chn">您是否了解《纽约公约》关于仲裁裁决承认和执行的相关规定？</span>
+                            <span class="en">Do you know the relevant provisions of the New York Convention on the recognition and enforcement of arbitral awards?</span>
+                        </div>
+                        <div class="answer yesOrNo">
+                            <div class="choosed">
+                                <span class="chn">是</span>
+                                <span class="en">YES</span>
+                            </div>
+                            <div>
+                                <span class="chn">否</span>
+                                <span class="en">NO</span>
+                            </div>
+                        </div>
+                    </div>
                     <!--<Question index={currentIndex + 1} data={qustion} />-->
                 </div>
                 <div class="commonBottom">
                     <div class="buttons">
-                        <!--{-->
-                        <!--!!currentIndex && <div>上一题</div>-->
-                        <!--}-->
-                        <div>上一题</div>
-                        <div onClick={this.clickNextHandler}>下一题</div>
+                        <div class="btn-pre"></div>
+                        <div class="btn-next" onClick={this.clickNextHandler}></div>
                     </div>
                     <div class="progressOuter">
                         <div class="progress">

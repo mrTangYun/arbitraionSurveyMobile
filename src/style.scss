@@ -97,17 +97,109 @@ img {
         }
       }
     }
-
-
-
     .buttons{
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
+      margin-bottom: 60px;
+      .btn-pre, .btn-next{
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        width: 117px;
+        height: 38px;
+      }
+      .btn-pre{
+        background-image: url("./images/btn-pre.png");
+        margin-right: 53px;
+      }
+      .btn-next{
+        background-image: url("./images/btn-next.png");
+      }
     }
 
     .qustionOuter{
       flex-grow: 1;
+      padding-top: 139px;
+      &.langChn{
+        .en{
+          display: none;
+        }
+        .count{
+          font-size: 30px;
+        }
+        .mainTitle{
+          font-size: 24px;
+        }
+        .answer{
+          &.yesOrNo{
+            font-size: 24px;
+          }
+        }
+      }
+      &.langEn{
+         .chn{
+           display: none;
+         }
+       }
+      .questionItem{
+        text-align: left;
+        .count{
+          margin-bottom: 44px;
+        }
+        .mainTitle{
+          margin-bottom: 50px;
+          position: relative;
+          &:before{
+            content: ' ';
+            display: block;
+            width: 8px;
+            height: 17px;
+            background-image: url("./images/mainTitleArrow.png");
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            position: absolute;
+            top: 9px;
+            left: -12px;
+          }
+        }
+        .answer{
+          &.yesOrNo{
+            display: flex;
+            flex-direction: row;
+            & > div {
+              margin-right: 115px;
+              position: relative;
+              &:before{
+                content: ' ';
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                border: 1px solid #000000;
+                border-radius: 50%;
+                right: -60px;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+              &:after{
+                content: ' ';
+                position: absolute;
+                width: 30px;
+                height: 35px;
+                background-image: url("./images/gou.png");
+                background-size: 100% auto;
+                background-repeat: no-repeat;
+                top: -7px;
+                right: -55px;
+                opacity: 0;
+                transition: opacity 300ms;
+              }
+              &.choosed:after, &:hover:after{
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
     }
   }
   .logo{
