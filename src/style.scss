@@ -411,7 +411,7 @@ img {
             margin-bottom: 44PX;
           }
           .mainTitle{
-            margin-bottom: 50PX;
+            margin-bottom: 30PX;
             &:before{
               width: 8PX;
               height: 17PX;
@@ -423,26 +423,26 @@ img {
             &.radios{
               &.yesOrNo{
                 & > div {
-                  padding-right: 115PX;
+                  padding-right: 85PX;
                 }
               }
               & > div{
                 cursor: pointer;
-                padding-top: 18PX;
-                padding-bottom: 18PX;
+                padding-top: 15PX;
+                padding-bottom: 15PX;
               }
               & > div > span {
                 &:before{
                   width: 30PX;
                   height: 30PX;
                   border: 1PX solid #000000;
-                  right: -60PX;
+                  right: -40PX;
                 }
                 &:after{
                   width: 26PX;
                   height: 30PX;
                   top: -10PX;
-                  right: -58PX;
+                  right: -38PX;
                 }
               }
             }
@@ -488,7 +488,7 @@ img {
             }
             &.inputInline{
               tr > td{
-                padding: 21PX 0;
+                padding: 15PX 0;
                 &:first-child{
                   padding-right: 21PX;
                 }
