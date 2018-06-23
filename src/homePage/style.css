@@ -1,0 +1,53 @@
+img {
+    content: normal !important;
+}
+.homePage{
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.page{
+    text-align: center;
+    font-family: "微软雅黑", Arial, sans-serif;
+    height: 100%;
+    min-height: 100%;
+}
+.logo{
+    width: 261px;
+    margin: 135px auto 0;
+}
+.logo img{
+    width: 100%;
+}
+.PageTitle{
+    width: 642px;
+    margin: 26px auto 51px;
+}
+.PageTitle img{
+    width: 100%;
+}
+.letter-chn{
+    width: 605px;
+    margin: 0 auto 35px;
+}
+.letter-en{
+    width: 605px;
+    margin: 0px auto 20px;
+}
+.letter-en img, .letter-chn img{
+    width: 100%;
+}
+.btn-start-chn{
+    margin-top: 20px;
+    text-align: right;
+}
+.btn-start-chn img{
+    width: 135px;
+}
+.btn-start-en{
+    margin-top: 20px;
+    text-align: right;
+}
+.btn-start-en img{
+    width: 184px;
+}
