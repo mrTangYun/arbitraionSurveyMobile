@@ -698,8 +698,9 @@ img {
                   & > div > span {
                     position: relative;
                     &:before{
-                      top: 10PX;
+                      top: -5PX;
                       right: -40PX;
+                      transform: none;
                     }
                     &:after{
 
