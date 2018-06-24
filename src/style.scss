@@ -236,7 +236,7 @@ img {
                   position: absolute;
                   width: 40px;
                   height: 40px;
-                  border: 1px solid #000000;
+                  border: 2px solid #000000;
                   border-radius: 50%;
                   right: -60px;
                   top: 50%;
@@ -287,7 +287,7 @@ img {
                 margin-bottom: 25px;
                 position: relative;
                 &:before{
-                  border: 1px solid #000000;
+                  border: 2px solid #000000;
                   content: " ";
                   position: absolute;
                   width: 30px;
@@ -371,7 +371,7 @@ img {
   .pclogo{
     position: absolute;
     display: block;
-    width: 250PX;
+    width: 273PX;
     margin: 0 0 0 14PX;
     padding: 21PX 0 0 0;
   }
@@ -400,22 +400,23 @@ img {
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      .letter-chn{
+        flex-grow: 1;
+        width: auto;
+        margin: 0 auto;
+        text-align: right;
+        padding-right: 2em;
+        border-right: 1px solid #9fa0a0;
+      }
+      .letter-en{
+        flex-grow: 1;
+        width: auto;
+        margin: 0px auto;
+        text-align: left;
+        padding-left: 2em;
+      }
     }
-    .letter-chn{
-      flex-grow: 1;
-      width: auto;
-      margin: 0 auto;
-      text-align: right;
-      padding-right: 2em;
-      border-right: 1px solid #9fa0a0;
-    }
-    .letter-en{
-      flex-grow: 1;
-      width: auto;
-      margin: 0px auto;
-      text-align: left;
-      padding-left: 2em;
-    }
+
     .letter-en img, .letter-chn img{
       height: 100%;
       width: auto;
@@ -476,7 +477,7 @@ img {
                     &:before{
                       width: 30PX;
                       height: 30PX;
-                      border: 1PX solid #000000;
+                      border: 2PX solid #000000;
                       right: -40PX;
                     }
                     &:after{
@@ -603,6 +604,141 @@ img {
         }
         .btn-pre{
           margin-right: 16PX
+        }
+      }
+    }
+  }
+}
+
+
+.ie9{
+  .clearFloat{
+    clear: both;
+  }
+  .logo{
+    display: none;
+  }
+  .pclogo{
+    position: absolute;
+    display: block;
+    width: 250PX;
+    margin: 0 0 0 14PX;
+    padding: 21PX 0 0 0;
+  }
+  #homePage{
+    display: flex;
+    flex-direction: column;
+    &.hide{
+      display: none;
+    }
+    .logo{
+      position: absolute;
+    }
+    .pageContainer{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-grow: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -50%);
+    }
+    .PageTitle{
+      width: 64.2%;
+      max-width: 642PX;
+      margin: 0PX auto 37PX;
+    }
+    .letters{
+      .letter-chn{
+        width: 50%;
+        float: left;
+        box-sizing: border-box;
+      }
+      .letter-en{
+        width: 50%;
+        float: right;
+        box-sizing: border-box;
+      }
+    }
+  }
+  .page{
+    &.questionPage{
+      &.hide{
+        display: none;
+      }
+      #changeLang{
+        height: 100%;
+        .qustionContainer{
+          position: relative;
+          .qustionOuter{
+            padding-top: 0;
+            padding-left: 15PX;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            .questionItem{
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
+      #changeLang{
+        width: 100%;
+        max-width: 1000PX;
+        margin: 0 auto;
+        height: 100%;
+        &.langChn{
+          font-size: 16PX;
+          .count{
+            font-size: 24PX;
+          }
+        }
+        &.langEn{
+          font-size: 14PX;
+          .chn{
+            display: none;
+          }
+          .count{
+            font-size: 24PX;
+          }
+          .buttons{
+            .btn-pre, .btn-next, .btn-submit{
+              width: 140PX;
+              height: 29PX;
+            }
+          }
+          .mainTitle:before {
+            width: 6PX;
+            height: 13PX;
+            top: 3PX;
+            left: -12PX;
+          }
+        }
+      }
+      .commonBottom{
+        .progressOuter{
+          .progress{
+            left: 4PX;
+            top: 2PX;
+          }
+        }
+      }
+      .buttons{
+        margin-bottom: 50PX;
+        padding-top: 0;
+        margin-right: 137PX;
+        .btn-pre, .btn-next, .btn-submit{
+          width: 117PX;
+          height: 38PX;
+          float: right;
+        }
+        .btn-pre{
+          margin-right: 16PX;
+          background-repeat: no-repeat;
+          background-size: 100% auto;
+          background-image: url("./images/btn-pre.png");
         }
       }
     }

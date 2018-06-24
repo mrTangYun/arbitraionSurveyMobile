@@ -7,7 +7,7 @@ import $ from 'jquery';
 
 // ReactDOM.render(<App />, document.getElementById('root'));
 
-const $btnPrev = $('.btn-pre'), $btnNext = $('.btn-next'), $btnSubmit = $('.btn-submit'), $prograssBar=$('.progress-bar');
+const $prograssBar=$('.progress-bar');
 const questionCount = $('.questionItem').length;
 
 
@@ -24,16 +24,16 @@ const calProgress = () => {
     const width = (index + 1) / questionCount * 100;
     $prograssBar.css('width', width + '%');
     if (index === 0) {
-        $btnPrev.hide();
+        $('.btn-pre').hide();
     } else {
-        $btnPrev.show();
+        $('.btn-pre').show();
     }
     if (index + 1 === questionCount) {
-        $btnNext.hide();
-        $btnSubmit.show();
+        $('.btn-next').hide();
+        $('.btn-submit').show();
     } else {
-        $btnNext.show();
-        $btnSubmit.hide();
+        $('.btn-next').show();
+        $('.btn-submit').hide();
     }
 };
 const bindHandler = () => {
@@ -90,6 +90,8 @@ const bindHandler = () => {
         $('#homePage').addClass('hide');
         $('#questionPage').removeClass('hide');
         $('#changeLang').removeClass('langEn').addClass('langChn');
+
+        fixIe9();
         calProgress();
     });
     $(document).on('touchstart click', '.btn-start-en', {}, (e) => {
@@ -100,6 +102,8 @@ const bindHandler = () => {
         $('#questionPage').removeClass('hide');
         $('#changeLang').removeClass('langChn').addClass('langEn');
         $('input, textarea').attr('placeholder', '');
+
+        fixIe9();
         calProgress();
     });
 };
@@ -120,10 +124,27 @@ const IsPC = () => {
     return flag;
 };
 
+const fixIe9 = () => {
+    if (!$("#root").hasClass('ie9')) {
+        return false;
+    }
+    const height = $('#changeLang').height() - $('.commonBottom').outerHeight();
+    $('.qustionContainer').css('height', height + 'px');
+    $('.commonBottom .buttons').html(`
+                        <div class="btn-submit"></div>
+                        <div class="btn-next"></div>
+                        <div class="btn-pre"></div>
+                        <div class="clearFloat"></div>
+    `);
+};
+
 const init = () => {
+    const userAgentInfo = navigator.userAgent;
+    if (userAgentInfo.indexOf('MSIE 9') > 0){
+        $("#root").addClass('ie9');
+    }
     const isPc = IsPC();
     this.isPc = isPc;
-
     const optionArray = [];
     for (let i = 0; i <= 100; i++) {
         optionArray.push(`<option value="${i}">${i}</option>`);
