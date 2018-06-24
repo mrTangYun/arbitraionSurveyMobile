@@ -674,13 +674,106 @@ img {
         .qustionContainer{
           position: relative;
           .qustionOuter{
-            padding-top: 0;
+            padding-top: 100PX;
             padding-left: 15PX;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
+            overflow-x: hidden;
             .questionItem{
               padding-bottom: 0;
+              .answer{
+                &.radios{
+                  &.yesOrNo{
+                    display: flex;
+                    flex-direction: row;
+                    & > div {
+                      right: -40PX;
+                    }
+                  }
+                  & > div{
+                    padding-top: 18px;
+                    padding-bottom: 18px;
+                    &.choosed > span:after{
+                      opacity: 1;
+                    }
+                  }
+                  & > div > span {
+                    position: relative;
+                    &:before{
+                      top: 10PX;
+                      right: -40PX;
+                    }
+                    &:after{
+
+                    }
+
+                  }
+                }
+                &.checkbox{
+                  & > div{
+                    padding-left: 57px;
+                    margin-bottom: 25px;
+                    position: relative;
+                    &:before{
+                      border: 2px solid #000000;
+                      content: " ";
+                      position: absolute;
+                      width: 30px;
+                      height: 30px;
+                      left: 0px;
+                      top: 4px;
+                    }
+                    &:after{
+                      content: ' ';
+                      position: absolute;
+                      width: 30px;
+                      height: 35px;
+                      background-image: url("./images/gou.png");
+                      background-size: 100% auto;
+                      background-repeat: no-repeat;
+                      top: 0px;
+                      left: 5px;
+                      opacity: 0;
+                      transition: opacity 300ms;
+                    }
+                    &.choosed{
+                      &:after{
+                        opacity: 1;
+                      }
+                    }
+                  }
+                }
+                &.inputInline{
+                  tr > td{
+                    padding: 21px 0;
+                    &:first-child{
+                      display: flex;
+                      padding-right: 21px;
+                      justify-content: center;
+                      align-items: center;
+                      div{
+                        width: 100%;
+                        & > span {
+                          flex-grow: 1;
+                          display: flex;
+                          flex-direction: row;
+                          justify-content: space-between;
+                        }
+                      }
+
+                    }
+                    &:last-child{
+                      input{
+                        height: 25px;
+                        line-height: 25px;
+                        border: 1px solid #000;
+                        background-color: rgba(255, 255, 255, 0.3);
+                        font-size: 16px;
+                        border-radius: 0;
+                        width: 290px;
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }
