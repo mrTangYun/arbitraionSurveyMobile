@@ -442,6 +442,7 @@ img {
         display: none;
       }
       #changeLang{
+        padding-top: 75Px;
         .qustionContainer{
           flex-grow: 1;
           display: flex;
@@ -671,6 +672,7 @@ img {
       }
       #changeLang{
         height: 100%;
+        padding-top: 0;
         .qustionContainer{
           position: relative;
           .qustionOuter{
