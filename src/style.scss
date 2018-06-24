@@ -708,72 +708,6 @@ img {
 
                   }
                 }
-                &.checkbox{
-                  & > div{
-                    padding-left: 57px;
-                    margin-bottom: 25px;
-                    position: relative;
-                    &:before{
-                      border: 2px solid #000000;
-                      content: " ";
-                      position: absolute;
-                      width: 30px;
-                      height: 30px;
-                      left: 0px;
-                      top: 4px;
-                    }
-                    &:after{
-                      content: ' ';
-                      position: absolute;
-                      width: 30px;
-                      height: 35px;
-                      background-image: url("./images/gou.png");
-                      background-size: 100% auto;
-                      background-repeat: no-repeat;
-                      top: 0px;
-                      left: 5px;
-                      opacity: 0;
-                      transition: opacity 300ms;
-                    }
-                    &.choosed{
-                      &:after{
-                        opacity: 1;
-                      }
-                    }
-                  }
-                }
-                &.inputInline{
-                  tr > td{
-                    padding: 21px 0;
-                    &:first-child{
-                      display: flex;
-                      padding-right: 21px;
-                      justify-content: center;
-                      align-items: center;
-                      div{
-                        width: 100%;
-                        & > span {
-                          flex-grow: 1;
-                          display: flex;
-                          flex-direction: row;
-                          justify-content: space-between;
-                        }
-                      }
-
-                    }
-                    &:last-child{
-                      input{
-                        height: 25px;
-                        line-height: 25px;
-                        border: 1px solid #000;
-                        background-color: rgba(255, 255, 255, 0.3);
-                        font-size: 16px;
-                        border-radius: 0;
-                        width: 290px;
-                      }
-                    }
-                  }
-                }
               }
             }
           }
@@ -832,8 +766,7 @@ img {
         .btn-pre{
           margin-right: 16PX;
           background-repeat: no-repeat;
-          background-size: 100% auto;
-          background-image: url("./images/btn-pre.png");
+          background-size: 100% 100%;
         }
       }
     }
