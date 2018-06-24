@@ -65,6 +65,7 @@ img {
     flex-direction: column;
     background-color: #c1ecfb;
     background-image: url("./images/questionbg.jpg");
+
     &.hide{
       display: none;
     };
@@ -644,14 +645,15 @@ img {
       flex-grow: 1;
       position: absolute;
       top: 50%;
-      left: 50%;
       width: 100%;
-      transform: translate(-50%, -50%);
+      transform: translateY( -50%);
+      background-color: red;
     }
     .PageTitle{
       width: 64.2%;
       max-width: 642PX;
       margin: 0PX auto 37PX;
+
     }
     .letters{
       background-color: red;
