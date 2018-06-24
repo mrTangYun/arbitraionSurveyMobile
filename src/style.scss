@@ -360,9 +360,17 @@ img {
       width: 100%;
     }
   }
+  .pclogo{
+    display: none;
+  }
 }
 .pcStyle{
   .logo{
+    display: none;
+  }
+  .pclogo{
+    position: absolute;
+    display: block;
     width: 250PX;
     margin: 0 0 0 14PX;
     padding: 21PX 0 0 0;
@@ -385,7 +393,7 @@ img {
     .PageTitle{
       width: 64.2%;
       max-width: 642PX;
-      margin: 24PX auto 37PX;
+      margin: -10PX auto 37PX;
     }
     .letters{
       display: flex;
@@ -425,6 +433,9 @@ img {
   .page{
     &.questionPage{
       display: flex;
+      &.hide{
+        display: none;
+      }
       #changeLang{
         .qustionContainer{
           flex-grow: 1;
