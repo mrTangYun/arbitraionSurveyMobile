@@ -83,7 +83,7 @@ const bindHandler = () => {
         calProgress();
     });
 
-    $(document).on('touchstart click', '.btn-start-chn', {}, (e) => {
+    $(document).on('touchstart click', '.btn-start-chn img', {}, (e) => {
         if (isNeedPreventClickEnvent(e)) {
             return false;
         }
@@ -94,7 +94,7 @@ const bindHandler = () => {
         fixIe9();
         calProgress();
     });
-    $(document).on('touchstart click', '.btn-start-en', {}, (e) => {
+    $(document).on('touchstart click', '.btn-start-en img', {}, (e) => {
         if (isNeedPreventClickEnvent(e)) {
             return false;
         }
