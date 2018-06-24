@@ -403,7 +403,7 @@ img {
       flex-direction: row;
       justify-content: center;
       align-items: stretch;
-      height: 276PX;
+      height: 290PX;
       .letter-chn{
         flex-grow: 1;
         width: auto;
@@ -616,6 +616,8 @@ img {
 
 
 .ie9{
+  overflow: hidden;
+  height: 100%;
   .clearFloat{
     clear: both;
   }
@@ -630,8 +632,8 @@ img {
     padding: 21PX 0 0 0;
   }
   #homePage{
-    display: flex;
-    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
     &.hide{
       display: none;
     }
@@ -639,34 +641,22 @@ img {
       position: absolute;
     }
     .pageContainer{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      flex-grow: 1;
-      position: absolute;
-      top: 50%;
       width: 100%;
-      transform: translateY( -50%);
-      background-color: red;
+      padding-top: 100PX;
     }
     .PageTitle{
       width: 64.2%;
       max-width: 642PX;
       margin: 0PX auto 37PX;
-
     }
     .letters{
-      background-color: red;
-      height: 276PX;
       .letter-chn{
         width: 50%;
         float: left;
         box-sizing: border-box;
-        background-color: blue;
         height: 100%;
       }
       .letter-en{
-        background-color: green;
         width: 50%;
         float: right;
         box-sizing: border-box;
