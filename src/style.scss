@@ -677,14 +677,24 @@ img {
             padding-top: 100PX;
             padding-left: 15PX;
             overflow-x: hidden;
+            background-color: red;
+            padding-bottom: 25PX;
             .questionItem{
               padding-bottom: 0;
               .answer{
                 &.radios{
+                  max-width: 50%;
                   &.yesOrNo{
-                    display: flex;
-                    flex-direction: row;
+                    &:after{
+                      clear:both;
+                      content:'.';
+                      display:block;
+                      width: 0;
+                      height: 0;
+                      visibility:hidden;
+                    };
                     & > div {
+                      float: left;
                       right: -40PX;
                     }
                   }
@@ -698,14 +708,18 @@ img {
                   & > div > span {
                     position: relative;
                     &:before{
-                      top: -5PX;
-                      right: -40PX;
+                      top: -4PX;
+                      right: -35PX;
                       transform: none;
+                      width: 20PX;
+                      height: 20PX;
                     }
-                    &:after{
 
-                    }
-
+                  }
+                }
+                &.select{
+                  & > div{
+                    padding-top: 10PX;
                   }
                 }
               }
