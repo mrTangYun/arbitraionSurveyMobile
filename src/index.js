@@ -123,6 +123,16 @@ const IsPC = () => {
 const init = () => {
     const isPc = IsPC();
     this.isPc = isPc;
+
+    const optionArray = [];
+    for (let i = 0; i <= 100; i++) {
+        optionArray.push(`<option value="${i}">${i}</option>`);
+    }
+    const optionHtml = optionArray.join('');
+    $('select').map((index, item) => {
+        const $this = $(item);
+        $this.html(optionHtml);
+    });
     $('img[data-pc]').map((index, item) => {
         const $this = $(item);
         const src = isPc ? $this.attr('data-pc') : $this.attr('data-mobile');

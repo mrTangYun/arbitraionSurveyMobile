@@ -105,20 +105,22 @@
             <div class="logo">
                 <img data-pc="images/logo-pc.png" data-mobile='images/logo.png' alt=""/>
             </div>
-            <div class="PageTitle">
-                <img data-pc='images/pageTitle-pc.png' data-mobile='images/pageTitle.png' alt=""/>
-            </div>
-            <div class="letters">
-                <div class="letter-chn">
-                    <img data-pc='images/letter-chn-pc.png' data-mobile='images/letter-chn.png' alt=""/>
-                    <div class="btn-start-chn">
-                        <img src='images/btn-start-chn.png' alt=""/>
-                    </div>
+            <div class="pageContainer">
+                <div class="PageTitle">
+                    <img data-pc='images/pageTitle-pc.png' data-mobile='images/pageTitle.png' alt=""/>
                 </div>
-                <div class="letter-en">
-                    <img data-pc='images/letter-en-pc.png' data-mobile='images/letter-en.png' alt=""/>
-                    <div class="btn-start-en">
-                        <img src='images/btn-start-en.png' alt=""/>
+                <div class="letters">
+                    <div class="letter-chn">
+                        <img data-pc='images/letter-chn-pc.png' data-mobile='images/letter-chn.png' alt=""/>
+                        <div class="btn-start-chn">
+                            <img src='images/btn-start-chn.png' alt=""/>
+                        </div>
+                    </div>
+                    <div class="letter-en">
+                        <img data-pc='images/letter-en-pc.png' data-mobile='images/letter-en.png' alt=""/>
+                        <div class="btn-start-en">
+                            <img src='images/btn-start-en.png' alt=""/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -128,273 +130,275 @@
                 <img data-pc="images/logo-pc.png" data-mobile='images/logo.png' alt=""/>
             </div>
             <div class="outer " id="changeLang">
-                <div class="qustionOuter">
-                    <!--题目开始  yesOrNo单选框-->
-                    <div class="questionItem">
-                        <div class="count">
-                            <span class="chn">题目1</span>
-                            <span class="en">Title 1</span>
-                        </div>
-                        <div class="mainTitle">
-                            <span class="chn">您是否了解《纽约公约》关于仲裁裁决承认和执行的相关规定？</span>
-                            <span class="en">Do you know the relevant provisions of the New York Convention on the recognition and enforcement of arbitral awards?</span>
-                        </div>
-                        <div class="answer radios yesOrNo">
-                            <div>
-                                <span class="chn">是</span>
-                                <span class="en">YES</span>
+                <div class="qustionContainer">
+                    <div class="qustionOuter">
+                        <!--题目开始  yesOrNo单选框-->
+                        <div class="questionItem">
+                            <div class="count">
+                                <span class="chn">题目1</span>
+                                <span class="en">Title 1</span>
                             </div>
-                            <div>
-                                <span class="chn">否</span>
-                                <span class="en">NO</span>
+                            <div class="mainTitle">
+                                <span class="chn">您是否了解《纽约公约》关于仲裁裁决承认和执行的相关规定？</span>
+                                <span class="en">Do you know the relevant provisions of the New York Convention on the recognition and enforcement of arbitral awards?</span>
                             </div>
-                        </div>
-                    </div>
-                    <!--题目结束  yesOrNo单选框-->
-                    <!--题目开始  下拉选择框-->
-                    <div class="questionItem">
-                        <div class="count">
-                            <span class="chn">题目2</span>
-                            <span class="en">Title 2</span>
-                        </div>
-                        <div class="mainTitle">
-                            <span class="chn">请问您参与过的国际仲裁案件有多少起？</span>
-                            <span class="en">How many international arbitration cases have you participated in?</span>
-                        </div>
-                        <div class="answer select">
-                            <div>
-                                <div class="title">
-                                    <span class="chn"></span>
-                                    <span class="en"></span>
+                            <div class="answer radios yesOrNo">
+                                <div>
+                                    <span class="chn">是</span>
+                                    <span class="en">YES</span>
                                 </div>
                                 <div>
-                                    <select>
-                                        <option value="0">0</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                    </select>
+                                    <span class="chn">否</span>
+                                    <span class="en">NO</span>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!--题目结束  下拉选择框-->
-                    <!--题目开始  自定义单选框-->
-                    <div class="questionItem">
-                        <div class="count">
-                            <span class="chn">题目3</span>
-                            <span class="en">Title 3</span>
-                        </div>
-                        <div class="mainTitle">
-                            <span class="chn">在您参与过的国际仲裁案件中，您具体参与的身份是？</span>
-                            <span class="en">Which role did you play in the international arbitration cases that you participated in?</span>
-                        </div>
-                        <div class="answer radios">
-                            <div>
-                                <span class="chn">当事人</span>
-                                <span class="en">The parties concerned</span>
+                        <!--题目结束  yesOrNo单选框-->
+                        <!--题目开始  下拉选择框-->
+                        <div class="questionItem">
+                            <div class="count">
+                                <span class="chn">题目2</span>
+                                <span class="en">Title 2</span>
                             </div>
-                            <div>
-                                <span class="chn">代理人</span>
-                                <span class="en">The agent</span>
+                            <div class="mainTitle">
+                                <span class="chn">请问您参与过的国际仲裁案件有多少起？</span>
+                                <span class="en">How many international arbitration cases have you participated in?</span>
                             </div>
-                            <div>
-                                <span class="chn">仲裁员</span>
-                                <span class="en">The arbitrator</span>
-                            </div>
-                            <div>
-                                <span class="chn">代理人和仲裁员都有</span>
-                                <span class="en">Both Agent and arbitrator</span>
-                            </div>
-                            <div>
-                                <span class="chn">其他</span>
-                                <span class="en">other</span>
+                            <div class="answer select">
+                                <div>
+                                    <div class="title">
+                                        <span class="chn"></span>
+                                        <span class="en"></span>
+                                    </div>
+                                    <div>
+                                        <select>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!--题目结束  自定义单选框-->
-                    <!--题目开始  下拉选择框-->
-                    <div class="questionItem">
-                        <div class="count">
-                            <span class="chn">题目4</span>
-                            <span class="en">Title 4</span>
-                        </div>
-                        <div class="mainTitle">
-                            <span class="chn">如果您曾以代理人和仲裁员两种身份参与过国际仲裁案件，以每种身份参与的案件有多少起？</span>
-                            <span class="en">How many international arbitration cases have you participated in?</span>
-                        </div>
-                        <div class="answer select">
-                            <div>
-                                <div class="title">
-                                    <span class="chn">代理人身份</span>
-                                    <span class="en">dailiren</span>
+                        <!--题目结束  下拉选择框-->
+                        <!--题目开始  自定义单选框-->
+                        <div class="questionItem">
+                            <div class="count">
+                                <span class="chn">题目3</span>
+                                <span class="en">Title 3</span>
+                            </div>
+                            <div class="mainTitle">
+                                <span class="chn">在您参与过的国际仲裁案件中，您具体参与的身份是？</span>
+                                <span class="en">Which role did you play in the international arbitration cases that you participated in?</span>
+                            </div>
+                            <div class="answer radios">
+                                <div>
+                                    <span class="chn">当事人</span>
+                                    <span class="en">The parties concerned</span>
                                 </div>
                                 <div>
-                                    <select>
-                                        <option value="0">0</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="title">
-                                    <span class="chn">仲裁员身份</span>
-                                    <span class="en">zhongcaiyuan</span>
+                                    <span class="chn">代理人</span>
+                                    <span class="en">The agent</span>
                                 </div>
                                 <div>
-                                    <select>
-                                        <option value="0">0</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--题目结束  下拉选择框-->
-                    <!--题目开始  组合-->
-                    <div class="questionItem">
-                        <div class="count">
-                            <span class="chn">题目5</span>
-                            <span class="en">Title 5</span>
-                        </div>
-                        <div class="mainTitle">
-                            <span class="chn">在您以代理人身份参与的国际仲裁案件结束后，您是否继续参与过后续的仲裁裁决的承认与执行程序（含与执行地所在司法区域律师合作的情形）？</span>
-                            <span class="en">How many international arbitration cases have you participated in?</span>
-                        </div>
-                        <div class="answer radios yesOrNo">
-                            <div>
-                                <span class="chn">是</span>
-                                <span class="en">YES</span>
-                            </div>
-                            <div>
-                                <span class="chn">否</span>
-                                <span class="en">NO</span>
-                            </div>
-                        </div>
-                        <div class="answer select">
-                            <div>
-                                <div class="title">
-                                    <span class="chn">有多少件此类案件？</span>
-                                    <span class="en">youduo shao</span>
+                                    <span class="chn">仲裁员</span>
+                                    <span class="en">The arbitrator</span>
                                 </div>
                                 <div>
-                                    <select>
-                                        <option value="0">0</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="answer textArea">
-                            <div>
-                                <div class="title">
-                                    <span class="chn">分别是在那些司法区域？</span>
-                                    <span class="en">where blablalbla bla</span>
+                                    <span class="chn">代理人和仲裁员都有</span>
+                                    <span class="en">Both Agent and arbitrator</span>
                                 </div>
                                 <div>
-                                    <textarea placeholder="请输入"></textarea>
+                                    <span class="chn">其他</span>
+                                    <span class="en">other</span>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!--题目结束  组合-->
-                    <!--题目开始  多选-->
-                    <div class="questionItem">
-                        <div class="count">
-                            <span class="chn">题目11</span>
-                            <span class="en">Title 11</span>
-                        </div>
-                        <div class="mainTitle">
-                            <span class="chn">您作为代理人或仲裁员参与的国际仲裁案件依据《纽约公约》未得到承认和执行的案件，法院不予承认和执行的具体依据是什么（是《纽约公约》第五条中所列的哪种情形）？</span>
-                            <span class="en">In the cases that you participated as an agent or arbitrator, which under the New York Convention had not been recognized and implemented, what were the specific grounds for the court's denial of recognition and enforcement? </span>
-                        </div>
-                        <div class="answer checkbox">
-                            <div>
-                                <span class="chn">仲裁协议无效？</span>
-                                <span class="en">Invalid arbitration agreement</span>
+                        <!--题目结束  自定义单选框-->
+                        <!--题目开始  下拉选择框-->
+                        <div class="questionItem">
+                            <div class="count">
+                                <span class="chn">题目4</span>
+                                <span class="en">Title 4</span>
                             </div>
-                            <div>
-                                <span class="chn">被申请人没有得到关于指定仲裁员或进行仲裁程序的适当通知，或者由于其他原因而不能对案件提出意见？</span>
-                                <span class="en">he respondent was not duly notified of the appointment of an arbitrator or of the arbitration proceedings or was unable to give an opinion on the case for other reasons</span>
+                            <div class="mainTitle">
+                                <span class="chn">如果您曾以代理人和仲裁员两种身份参与过国际仲裁案件，以每种身份参与的案件有多少起？</span>
+                                <span class="en">How many international arbitration cases have you participated in?</span>
+                            </div>
+                            <div class="answer select">
+                                <div>
+                                    <div class="title">
+                                        <span class="chn">代理人身份</span>
+                                        <span class="en">dailiren</span>
+                                    </div>
+                                    <div>
+                                        <select>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="title">
+                                        <span class="chn">仲裁员身份</span>
+                                        <span class="en">zhongcaiyuan</span>
+                                    </div>
+                                    <div>
+                                        <select>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <!--题目结束  下拉选择框-->
+                        <!--题目开始  组合-->
+                        <div class="questionItem">
+                            <div class="count">
+                                <span class="chn">题目5</span>
+                                <span class="en">Title 5</span>
+                            </div>
+                            <div class="mainTitle">
+                                <span class="chn">在您以代理人身份参与的国际仲裁案件结束后，您是否继续参与过后续的仲裁裁决的承认与执行程序（含与执行地所在司法区域律师合作的情形）？</span>
+                                <span class="en">How many international arbitration cases have you participated in?</span>
+                            </div>
+                            <div class="answer radios yesOrNo">
+                                <div>
+                                    <span class="chn">是</span>
+                                    <span class="en">YES</span>
+                                </div>
+                                <div>
+                                    <span class="chn">否</span>
+                                    <span class="en">NO</span>
+                                </div>
+                            </div>
+                            <div class="answer select">
+                                <div>
+                                    <div class="title">
+                                        <span class="chn">有多少件此类案件？</span>
+                                        <span class="en">youduo shao</span>
+                                    </div>
+                                    <div>
+                                        <select>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="answer textArea">
+                                <div>
+                                    <div class="title">
+                                        <span class="chn">分别是在那些司法区域？</span>
+                                        <span class="en">where blablalbla bla</span>
+                                    </div>
+                                    <div>
+                                        <textarea placeholder="请输入"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--题目结束  组合-->
+                        <!--题目开始  多选-->
+                        <div class="questionItem">
+                            <div class="count">
+                                <span class="chn">题目11</span>
+                                <span class="en">Title 11</span>
+                            </div>
+                            <div class="mainTitle">
+                                <span class="chn">您作为代理人或仲裁员参与的国际仲裁案件依据《纽约公约》未得到承认和执行的案件，法院不予承认和执行的具体依据是什么（是《纽约公约》第五条中所列的哪种情形）？</span>
+                                <span class="en">In the cases that you participated as an agent or arbitrator, which under the New York Convention had not been recognized and implemented, what were the specific grounds for the court's denial of recognition and enforcement? </span>
+                            </div>
+                            <div class="answer checkbox">
+                                <div>
+                                    <span class="chn">仲裁协议无效？</span>
+                                    <span class="en">Invalid arbitration agreement</span>
+                                </div>
+                                <div>
+                                    <span class="chn">被申请人没有得到关于指定仲裁员或进行仲裁程序的适当通知，或者由于其他原因而不能对案件提出意见？</span>
+                                    <span class="en">he respondent was not duly notified of the appointment of an arbitrator or of the arbitration proceedings or was unable to give an opinion on the case for other reasons</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--题目结束  多选-->
+                        <!--题目开始  个人信息-->
+                        <div class="questionItem">
+                            <div class="count">
+                                <span class="chn">题目18</span>
+                                <span class="en">Title 18</span>
+                            </div>
+                            <div class="mainTitle">
+                                <span class="chn">您的案件是否保密？案件的具体信息，是否方便披露？如果方便披露，请留下通讯方式，以便我们在需要时联系您？</span>
+                                <span class="en">Is your case confidential? Is it possible to disclose the specific information of the case? If it is possible for disclosure, please leave your contact information so that we can contact you if needed.</span>
+                            </div>
+                            <div class="answer inputInline">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="chn">姓名</div>
+                                            <div class="en">NAME</div>
+                                        </td>
+                                        <td>
+                                            <input placeholder="请输入" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="chn">电话</div>
+                                            <div class="en">TEL</div>
+                                        </td>
+                                        <td>
+                                            <input placeholder="请输入" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="chn">传真</div>
+                                            <div class="en">FEX</div>
+                                        </td>
+                                        <td>
+                                            <input placeholder="请输入" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="chn"><span>E-mail</span></div>
+                                            <div class="en"><span>E-mail</span></div>
+                                        </td>
+                                        <td>
+                                            <input placeholder="请输入" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!--题目结束  个人信息-->
+                        <!--<Question index={currentIndex + 1} data={qustion} />-->
                     </div>
-                    <!--题目结束  多选-->
-                    <!--题目开始  个人信息-->
-                    <div class="questionItem">
-                        <div class="count">
-                            <span class="chn">题目18</span>
-                            <span class="en">Title 18</span>
-                        </div>
-                        <div class="mainTitle">
-                            <span class="chn">您的案件是否保密？案件的具体信息，是否方便披露？如果方便披露，请留下通讯方式，以便我们在需要时联系您？</span>
-                            <span class="en">Is your case confidential? Is it possible to disclose the specific information of the case? If it is possible for disclosure, please leave your contact information so that we can contact you if needed.</span>
-                        </div>
-                        <div class="answer inputInline">
-                            <table>
-                                <tr>
-                                    <td>
-                                        <div class="chn">姓名</div>
-                                        <div class="en">NAME</div>
-                                    </td>
-                                    <td>
-                                        <input placeholder="请输入" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="chn">电话</div>
-                                        <div class="en">TEL</div>
-                                    </td>
-                                    <td>
-                                        <input placeholder="请输入" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="chn">传真</div>
-                                        <div class="en">FEX</div>
-                                    </td>
-                                    <td>
-                                        <input placeholder="请输入" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="chn"><span>E-mail</span></div>
-                                        <div class="en"><span>E-mail</span></div>
-                                    </td>
-                                    <td>
-                                        <input placeholder="请输入" />
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <!--题目结束  个人信息-->
-                    <!--<Question index={currentIndex + 1} data={qustion} />-->
                 </div>
                 <div class="commonBottom">
                     <div class="buttons">
