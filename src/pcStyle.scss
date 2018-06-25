@@ -1,0 +1,249 @@
+.pcStyle{
+  .logo{
+    display: none;
+  }
+  .pclogo{
+    position: absolute;
+    display: block;
+    width: 273PX;
+    margin: 0 0 0 14PX;
+    padding: 21PX 0 0 0;
+  }
+  #homePage{
+    display: flex;
+    flex-direction: column;
+    &.hide{
+      display: none;
+    }
+    .logo{
+      position: absolute;
+    }
+    .pageContainer{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-grow: 1;
+    }
+    .PageTitle{
+      width: 64.2%;
+      max-width: 642PX;
+      margin: -10PX auto 37PX;
+    }
+    .letters{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+      height: 290PX;
+      .letter-chn{
+        flex-grow: 1;
+        width: auto;
+        margin: 0 auto;
+        text-align: right;
+        padding-right: 2em;
+        border-right: 1px solid #9fa0a0;
+      }
+      .letter-en{
+        flex-grow: 1;
+        width: auto;
+        margin: 0px auto;
+        text-align: left;
+        padding-left: 2em;
+      }
+    }
+
+    .letter-en img, .letter-chn img{
+      height: 100%;
+      width: auto;
+    }
+    .letter-chn, .letter-en{
+      position: relative;
+      .btn-start-chn, .btn-start-en{
+        position: absolute;
+      }
+      .btn-start-chn {
+        right: 2em;
+      }
+    }
+  }
+  .page{
+    &.questionPage{
+      display: flex;
+      &.hide{
+        display: none;
+      }
+      #changeLang{
+        padding-top: 75Px;
+        .qustionContainer{
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .qustionOuter{
+            flex-grow: 0;
+            padding-top: 0;
+            padding-left: 15PX;
+            .questionItem{
+              padding-bottom: 0;
+              .count{
+                margin-bottom: 34PX;
+              }
+              .mainTitle{
+                margin-bottom: 20PX;
+                &:before{
+                  width: 8PX;
+                  height: 17PX;
+                  top: 3PX;
+                  left: -12PX;
+                }
+              }
+              .answer{
+                &.radios{
+                  &.yesOrNo{
+                    & > div {
+                      padding-right: 85PX;
+                    }
+                  }
+                  & > div{
+                    cursor: pointer;
+                    padding-top: 15PX;
+                    padding-bottom: 15PX;
+                  }
+                  & > div > span {
+                    &:before{
+                      width: 25PX;
+                      height: 25PX;
+                      border: 2PX solid #000000;
+                      right: -40PX;
+                    }
+                    &:after{
+                      width: 20PX;
+                      height: 30PX;
+                      top: -3PX;
+                      right: -35PX;
+                    }
+                  }
+                }
+                &.select{
+                  & > div {
+                    cursor: pointer;
+                    margin-bottom: 25PX;
+                    select{
+                      min-width: 40PX;
+                      max-width: 100PX;
+                      height: 20PX;
+                      font-size: 16PX;
+                      border: 1PX solid #000000;
+                    }
+                  }
+                }
+                &.textArea{
+                  textarea{
+                    border: 1PX solid #000000;
+                    border-radius: 5PX;
+                    max-width: 365PX;
+                  }
+                }
+                &.checkbox{
+                  & > div{
+                    cursor: pointer;
+                    padding-left: 57PX;
+                    margin-bottom: 25PX;
+                    &:before{
+                      border: 1PX solid #000000;
+                      width: 25PX;
+                      height: 25PX;
+                      left: 0PX;
+                      top: -2PX;
+                    }
+                    &:after{
+                      width: 25PX;
+                      height: 30PX;
+                      top: -7PX;
+                      left: 3PX;
+                    }
+                  }
+                }
+                &.inputInline{
+                  tr > td{
+                    padding: 15PX 0;
+                    &:first-child{
+                      padding-right: 21PX;
+                    }
+                    &:last-child{
+                      input{
+                        height: 25PX;
+                        line-height: 25PX;
+                        border: 1PX solid #000;
+                        font-size: 16PX;
+                        width: 290PX;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      #changeLang{
+        width: 100%;
+        max-width: 1000PX;
+        margin: 0 auto;
+        &.langChn{
+          font-size: 16PX;
+          .count{
+            font-size: 24PX;
+          }
+        }
+        &.langEn{
+          font-size: 14PX;
+          .chn{
+            display: none;
+          }
+          .count{
+            font-size: 24PX;
+          }
+          .buttons{
+            .btn-pre, .btn-next, .btn-submit{
+              width: 140PX;
+              height: 29PX;
+            }
+          }
+          .mainTitle:before {
+            width: 6PX;
+            height: 13PX;
+            top: 3PX;
+            left: -12PX;
+          }
+        }
+      }
+      .commonBottom{
+        padding-bottom: 22PX;
+        .progressOuter{
+          width: 566PX;
+          height: 17PX;
+          border-radius: 8PX;
+          .progress{
+            width: 556PX;
+            height: 13PX;
+          }
+        }
+      }
+      .buttons{
+        margin-bottom: 50PX;
+        padding-top: 0;
+        margin-right: 137PX;
+        .btn-pre, .btn-next, .btn-submit{
+          width: 117PX;
+          height: 38PX;
+        }
+        .btn-pre{
+          margin-right: 16PX
+        }
+      }
+    }
+  }
+}
+
+@import './ie9';

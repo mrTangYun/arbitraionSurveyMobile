@@ -1,0 +1,176 @@
+.ie9{
+  overflow: hidden;
+  height: 100%;
+  .clearFloat{
+    clear: both;
+  }
+  .logo{
+    display: none;
+  }
+  .pclogo{
+    position: absolute;
+    display: block;
+    width: 250PX;
+    margin: 0 0 0 14PX;
+    padding: 21PX 0 0 0;
+  }
+  #homePage{
+    overflow: hidden;
+    height: 100%;
+    &.hide{
+      display: none;
+    }
+    .logo{
+      position: absolute;
+    }
+    .pageContainer{
+      width: 100%;
+      padding-top: 100PX;
+    }
+    .PageTitle{
+      width: 64.2%;
+      max-width: 642PX;
+      margin: 0PX auto 37PX;
+    }
+    .letters{
+      .letter-chn{
+        width: 50%;
+        float: left;
+        box-sizing: border-box;
+        height: 100%;
+      }
+      .letter-en{
+        width: 50%;
+        float: right;
+        box-sizing: border-box;
+        height: 100%;
+      }
+    }
+  }
+  .page{
+    &.questionPage{
+      &.hide{
+        display: none;
+      }
+      #changeLang{
+        height: 100%;
+        padding-top: 0;
+        .qustionContainer{
+          position: relative;
+          .qustionOuter{
+            padding-top: 100PX;
+            padding-left: 15PX;
+            overflow-x: hidden;
+            padding-bottom: 25PX;
+            .questionItem{
+              padding-bottom: 0;
+              .answer{
+                &.radios{
+                  max-width: 50%;
+                  &.yesOrNo{
+                    &:after{
+                      clear:both;
+                      content:'.';
+                      display:block;
+                      width: 0;
+                      height: 0;
+                      visibility:hidden;
+                    };
+                    & > div {
+                      float: left;
+                      right: -40PX;
+                    }
+                  }
+                  & > div{
+                    padding-top: 10PX;
+                    padding-bottom: 10PX;
+                    &.choosed > span:after{
+                      opacity: 1;
+                    }
+                  }
+                  & > div > span {
+                    position: relative;
+                    &:before{
+                      top: -1PX;
+                      right: -35PX;
+                      transform: none;
+                      width: 20PX;
+                      height: 20PX;
+                    }
+                    &:after{
+                      top: -1PX;
+                      width: 17PX;
+                      height: 30PX;
+                      right: -33PX;
+                    }
+                  }
+                }
+                &.select{
+                  & > div{
+                    padding-top: 10PX;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      #changeLang{
+        width: 100%;
+        max-width: 1000PX;
+        margin: 0 auto;
+        height: 100%;
+        &.langChn{
+          font-size: 16PX;
+          .count{
+            font-size: 24PX;
+          }
+        }
+        &.langEn{
+          font-size: 14PX;
+          .chn{
+            display: none;
+          }
+          .count{
+            font-size: 24PX;
+          }
+          .buttons{
+            .btn-pre, .btn-next, .btn-submit{
+              width: 140PX;
+              height: 29PX;
+            }
+          }
+          .mainTitle:before {
+            width: 6PX;
+            height: 13PX;
+            top: 3PX;
+            left: -12PX;
+          }
+        }
+      }
+      .commonBottom{
+        .progressOuter{
+          .progress{
+            left: 4PX;
+            top: 2PX;
+          }
+        }
+      }
+      .buttons{
+        margin-bottom: 50PX;
+        padding-top: 0;
+        margin-right: 137PX;
+        .btn-pre, .btn-next, .btn-submit{
+          width: 117PX;
+          height: 38PX;
+          float: right;
+        }
+        .btn-pre{
+          margin-right: 16PX;
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+    }
+  }
+}
