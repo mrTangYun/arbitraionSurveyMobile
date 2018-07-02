@@ -250,25 +250,25 @@
   #dialog{
     .content{
       & > div {
-        width: 512PX;
-        height: 428PX;
+        width: 300PX;
+        height: 246PX;
         .btn-complete{
-          bottom: -29PX;
+          bottom: -20PX;
         }
         &.chn {
           .btn-complete{
-            width: 217PX;
-            height: 67PX;
+            width: 123PX;
+            height: 37PX;
             left: 50%;
-            margin-left: -109PX;
+            margin-left: -61PX;
           }
         }
         &.en {
           .btn-complete{
-            width: 231PX;
-            height: 71PX;
+            width: 134PX;
+            height: 41PX;
             left: 50%;
-            margin-left: -115PX;
+            margin-left: -67PX;
           }
         }
       }
