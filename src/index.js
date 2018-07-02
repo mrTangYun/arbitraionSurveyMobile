@@ -19,6 +19,15 @@ const isNeedPreventClickEnvent = (e) => {
     }
 };
 
+const dialog = {
+    show: () => {
+        $('#dialog').show();
+    },
+    hide: () => {
+        $('#dialog').hide();
+    }
+};
+
 const calProgress = () => {
     const index = $('.questionItem:visible').index('.questionItem');
     const width = (index + 1) / questionCount * 100;
@@ -89,7 +98,7 @@ const bindHandler = () => {
         }
         $('#homePage').addClass('hide');
         $('#questionPage').removeClass('hide');
-        $('#changeLang').removeClass('langEn').addClass('langChn');
+        $('#changeLang, #dialog').removeClass('langEn').addClass('langChn');
 
         fixIe9();
         calProgress();
@@ -100,11 +109,30 @@ const bindHandler = () => {
         }
         $('#homePage').addClass('hide');
         $('#questionPage').removeClass('hide');
-        $('#changeLang').removeClass('langChn').addClass('langEn');
+        $('#changeLang, #dialog').removeClass('langChn').addClass('langEn');
         $('input, textarea').attr('placeholder', '');
 
         fixIe9();
         calProgress();
+    });
+    $(document).on('touchstart click', '.btn-complete', {}, (e) => {
+        if (isNeedPreventClickEnvent(e)) {
+            return false;
+        }
+        $('#homePage').removeClass('hide');
+        $('#questionPage').addClass('hide');
+        $('#changeLang').removeClass('langChn').removeClass('langEn');
+        dialog.hide();
+        $('.questionItem').eq(0).show().siblings().hide();
+        calProgress();
+    });
+
+
+    $(document).on('touchstart click', '.btn-submit', {}, (e) => {
+        if (isNeedPreventClickEnvent(e)) {
+            return false;
+        }
+        dialog && dialog.show();
     });
 };
 
@@ -138,6 +166,7 @@ const fixIe9 = () => {
     `);
 };
 
+
 const init = () => {
     const userAgentInfo = navigator.userAgent;
     if (userAgentInfo.indexOf('MSIE 9') > 0){
@@ -163,5 +192,6 @@ const init = () => {
     $('.questionItem').hide().eq(0).show();
     bindHandler();
     window.$ = $;
+    window.dialog = dialog;
 };
 init();

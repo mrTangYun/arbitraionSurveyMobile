@@ -173,4 +173,32 @@
       }
     }
   }
+
+  #dialog{
+    .content{
+      & > div {
+        width: 512PX;
+        height: 428PX;
+        .btn-complete{
+          bottom: -29PX;
+        }
+        &.chn {
+          .btn-complete{
+            width: 217PX;
+            height: 67PX;
+            left: 50%;
+            margin-left: -109PX;
+          }
+        }
+        &.en {
+          .btn-complete{
+            width: 231PX;
+            height: 71PX;
+            left: 50%;
+            margin-left: -115PX;
+          }
+        }
+      }
+    }
+  }
 }

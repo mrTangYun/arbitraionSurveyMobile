@@ -7,6 +7,65 @@ img {
   overflow: hidden;
 }
 
+#dialog{
+  position: absolute;
+  background-color: rgba(142, 142, 142, 0.7);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  .content{
+    & > div {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 277PX;
+      height: 228PX;
+      img{
+        width: 100%;
+      }
+      .btn-complete{
+        position: absolute;
+        bottom: -17PX;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        cursor: pointer;
+      }
+      &.chn {
+        .btn-complete{
+          width: 115PX;
+          height: 35PX;
+          background-image: url('./images/btn-complete.png');
+          left: 50%;
+          margin-left: -58PX;
+        }
+      }
+      &.en {
+        .btn-complete{
+          width: 123PX;
+          height: 37PX;
+          background-image: url('./images/btn-complete-en.png');
+          left: 50%;
+          margin-left: -61PX;
+        }
+      }
+    }
+  }
+  &.langChn{
+    .en{
+      display: none;
+    }
+  }
+  &.langEn{
+    .chn{
+      display: none;
+    }
+  }
+}
+
 .page{
   text-align: center;
   font-family: "微软雅黑", Arial, sans-serif;
