@@ -10,6 +10,28 @@ import $ from 'jquery';
 const $prograssBar=$('.progress-bar');
 const questionCount = $('.questionItem').length;
 
+const switchLanguage = (lan) => {
+    let options = this.optionsNeedChangeLan;
+    if (!options) {
+        options = [];
+        $('option').each((item, e) => {
+            const $this = $(e);
+            const text = $this.text();
+            if (/^\d+以上$/.test(text)) {
+                options = [...options, {
+                    element: e,
+                    chn: text,
+                    en: text.replace(/(\d+)(以上)/, 'above $1')
+                }];
+            }
+        })
+    }
+    options.map(item => {
+        $(item.element).text(item[lan]);
+        return null;
+    });
+    this.optionsNeedChangeLan = options;
+};
 
 const isNeedPreventClickEnvent = (e) => {
     if (e.type === 'click') {
@@ -99,7 +121,7 @@ const bindHandler = () => {
         $('#homePage').addClass('hide');
         $('#questionPage').removeClass('hide');
         $('#changeLang, #dialog').removeClass('langEn').addClass('langChn');
-
+        switchLanguage('chn');
         fixIe9();
         calProgress();
     });
@@ -111,7 +133,7 @@ const bindHandler = () => {
         $('#questionPage').removeClass('hide');
         $('#changeLang, #dialog').removeClass('langChn').addClass('langEn');
         $('input, textarea').attr('placeholder', '');
-
+        switchLanguage('en');
         fixIe9();
         calProgress();
     });
