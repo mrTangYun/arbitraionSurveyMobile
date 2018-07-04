@@ -62,9 +62,11 @@ const calProgress = () => {
     if (index + 1 === questionCount) {
         $('.btn-next').hide();
         $('.btn-submit').show();
+        $('.btn-preview').show();
     } else {
         $('.btn-next').show();
         $('.btn-submit').hide();
+        $('.btn-preview').hide();
     }
 };
 const bindHandler = () => {
@@ -122,6 +124,8 @@ const bindHandler = () => {
         $('#questionPage').removeClass('hide');
         $('#changeLang, #dialog').removeClass('langEn').addClass('langChn');
         switchLanguage('chn');
+        $('.btn-confirm img').attr('src', require('./images/btn-confrim.png'));
+        $('.btn-back img').attr('src', require('./images/btn-back.png'));
         fixIe9();
         calProgress();
     });
@@ -134,6 +138,8 @@ const bindHandler = () => {
         $('#changeLang, #dialog').removeClass('langChn').addClass('langEn');
         $('input, textarea').attr('placeholder', '');
         switchLanguage('en');
+        $('.btn-confirm img').attr('src', require('./images/btn-confrim-en.png'));
+        $('.btn-back img').attr('src', require('./images/btn-back-en.png'));
         fixIe9();
         calProgress();
     });
@@ -145,10 +151,27 @@ const bindHandler = () => {
         $('#questionPage').addClass('hide');
         $('#changeLang').removeClass('langChn').removeClass('langEn');
         dialog.hide();
-        $('.questionItem').eq(0).show().siblings().hide();
+        $('.questionItem').eq(0).show().siblings('.questionItem').hide();
         calProgress();
     });
 
+    $(document).on('touchstart click', '.btn-back', {}, (e) => {
+        if (isNeedPreventClickEnvent(e)) {
+            return false;
+        }
+        $('.questionItem').eq(questionCount - 1).show().siblings(".questionItem").hide();
+        $('body').removeClass('preview');
+        calProgress();
+    });
+
+    $(document).on('touchstart click', '.btn-preview', {}, (e) => {
+        if (isNeedPreventClickEnvent(e)) {
+            return false;
+        }
+        $('.questionItem').show();
+        $('body').addClass('preview');
+        // dialog && dialog.show();
+    });
 
     $(document).on('touchstart click', '.btn-submit', {}, (e) => {
         if (isNeedPreventClickEnvent(e)) {
@@ -156,6 +179,7 @@ const bindHandler = () => {
         }
         dialog && dialog.show();
     });
+
 };
 
 
@@ -181,6 +205,7 @@ const fixIe9 = () => {
     const height = $('#changeLang').height() - $('.commonBottom').outerHeight();
     $('.qustionContainer').css('height', height + 'px');
     $('.commonBottom .buttons').html(`
+                        <div class="btn-preview"></div>
                         <div class="btn-submit"></div>
                         <div class="btn-next"></div>
                         <div class="btn-pre"></div>

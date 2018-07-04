@@ -224,7 +224,7 @@ img {
       justify-content: flex-end;
       margin-bottom: 40px;
       padding-top: 60px;
-      .btn-pre, .btn-next, .btn-submit{
+      .btn-pre, .btn-next, .btn-submit, .btn-preview{
         background-repeat: no-repeat;
         background-size: 100% auto;
         width: 117px;
@@ -239,6 +239,11 @@ img {
       }
       .btn-submit{
         background-image: url("./images/btn-submit.png");
+        margin-right: 53px;
+      }
+      .btn-preview{
+        width: 170px;
+        background-image: url("./images/btn-preview.png");
       }
     }
     .qustionContainer{
@@ -413,6 +418,9 @@ img {
             }
           }
         }
+        .previewButtons{
+          display: none;
+        }
       }
     }
   }
@@ -425,6 +433,42 @@ img {
     }
   }
   .pclogo{
+    display: none;
+  }
+}
+
+.preview {
+  .page.questionPage .qustionContainer .qustionOuter{
+    flex-direction: column;
+    position: absolute;
+    top: 2em;
+    left: 2em;
+    bottom: 2em;
+    right: 2em;
+    z-index: 100;
+    padding-top: 0;
+    .questionItem{
+    }
+    .previewButtons{
+      display: block;
+      & > div {
+        float: right;
+        height: 44px;
+        margin-left: 50px;
+        cursor: pointer;
+        img{
+          height: 100%;
+          width: auto;
+        }
+      }
+      &:after{
+        display: block;
+        content: ' ';
+        clear: both;
+      }
+    }
+  }
+  .pcStyle .pclogo, .logo, .commonBottom{
     display: none;
   }
 }

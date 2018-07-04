@@ -237,12 +237,18 @@
         margin-bottom: 50PX;
         padding-top: 0;
         margin-right: 137PX;
-        .btn-pre, .btn-next, .btn-submit{
+        .btn-pre, .btn-next, .btn-submit, .btn-preview{
           width: 117PX;
           height: 38PX;
         }
         .btn-pre{
           margin-right: 16PX
+        }
+        .btn-submit{
+          margin-right: 16PX
+        }
+        .btn-preview{
+          width: 153PX;
         }
       }
     }
@@ -274,4 +280,18 @@
       }
     }
   }
+}
+
+.preview {
+  .pcStyle{
+    .page.questionPage .qustionContainer .qustionOuter{
+      .previewButtons{
+        & > div {
+          height: 44PX;
+          margin-left: 50PX;
+        }
+      }
+    }
+  }
+
 }
