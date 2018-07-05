@@ -448,6 +448,7 @@ img {
     z-index: 100;
     padding-top: 0;
     .questionItem{
+      flex-shrink: 0;
     }
     .previewButtons{
       display: block;
