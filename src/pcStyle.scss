@@ -205,12 +205,16 @@
             font-size: 24PX;
           }
           .buttons{
-            .btn-pre, .btn-next, .btn-submit{
+            .btn-pre, .btn-next, .btn-submit, .btn-preview{
               width: 140PX;
               height: 29PX;
+              background-size: auto 100%;
             }
             .btn-pre{
               width: 191PX;
+            }
+            .btn-preview{
+              width: 120PX;
             }
           }
           .mainTitle:before {

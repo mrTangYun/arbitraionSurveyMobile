@@ -150,7 +150,7 @@ img {
           font-size: 32px;
         }
         .buttons{
-          .btn-pre, .btn-next, .btn-submit{
+          .btn-pre, .btn-next, .btn-submit, .btn-preview{
             width: 183px;
             height: 37px;
           }
@@ -163,6 +163,10 @@ img {
           }
           .btn-submit{
             background-image: url("./images/btn-submit-en.png");
+          }
+          .btn-preview{
+            width: 153px;
+            background-image: url("./images/btn-preview-en.png");
           }
         }
       }
